@@ -3,6 +3,7 @@ import "./App.css";
 import HotelCard from "./components/Cards/HotelCard/HotelCard";
 // import MySentence from "./components/MySentence/MySentence";
 // import Greeting from "./components/Greeting/Greeting";
+import hotels from "./common/hotels.json";
 
 function App() {
   // const [count, setCount] = useState(0);
@@ -42,7 +43,7 @@ function App() {
   // setCount((prevValue) => prevValue + 3)
   return (
     // <React.Fragment>
-    <>
+    <div className="app">
       {/* <Greeting appName="Lyntel" fullName="Dzenan Kosuta" /> */}
       {/* <div className="card">
         <button onClick={() => setCount((prevValue) => prevValue - 1)}>
@@ -65,78 +66,17 @@ function App() {
         </div>
       ))} */}
       <div className="hotels">
-        <HotelCard
-          imageUrl="https://www.kayak.co.uk/news/wp-content/uploads/sites/5/2023/08/THEME_HOTEL_SIGN_FIVE_STARS_FACADE_BUILDING_GettyImages-1320779330-3-1640x1312.jpg"
-          title="KAYAK"
-          content={
-            <>
-              $174 <del>$369</del>
-            </>
-          }
-          total={450}
-        />
-        <HotelCard
-          imageUrl="https://cf.bstatic.com/xdata/images/hotel/max1024x768/273076792.jpg?k=5cb683ba5db555146e2a471941e7fdecf7eb86754f97c11e45e683004d70e19a&o=&hp=1"
-          title="Vrbak"
-          content={
-            <>
-              $40 <del>$60</del>
-            </>
-          }
-          total={160}
-        />
-        <HotelCard
-          imageUrl="https://cf.bstatic.com/xdata/images/hotel/max1024x768/273076792.jpg?k=5cb683ba5db555146e2a471941e7fdecf7eb86754f97c11e45e683004d70e19a&o=&hp=1"
-          title="Vrbak"
-          content={
-            <>
-              $40 <del>$60</del>
-            </>
-          }
-          total={160}
-        />
-        <HotelCard
-          imageUrl="https://cf.bstatic.com/xdata/images/hotel/max1024x768/273076792.jpg?k=5cb683ba5db555146e2a471941e7fdecf7eb86754f97c11e45e683004d70e19a&o=&hp=1"
-          title="Palma"
-          content={
-            <>
-              $40 <del>$60</del>
-            </>
-          }
-          total={160}
-        />
-        <HotelCard
-          imageUrl="https://cf.bstatic.com/xdata/images/hotel/max1024x768/273076792.jpg?k=5cb683ba5db555146e2a471941e7fdecf7eb86754f97c11e45e683004d70e19a&o=&hp=1"
-          title="Atlas"
-          content={
-            <>
-              $40 <del>$60</del>
-            </>
-          }
-          total={160}
-        />
-        <HotelCard
-          imageUrl="https://cf.bstatic.com/xdata/images/hotel/max1024x768/273076792.jpg?k=5cb683ba5db555146e2a471941e7fdecf7eb86754f97c11e45e683004d70e19a&o=&hp=1"
-          title="Vrbak"
-          content={
-            <>
-              $40 <del>$60</del>
-            </>
-          }
-          total={160}
-        />
-        <HotelCard
-          imageUrl="https://cf.bstatic.com/xdata/images/hotel/max1024x768/273076792.jpg?k=5cb683ba5db555146e2a471941e7fdecf7eb86754f97c11e45e683004d70e19a&o=&hp=1"
-          title="Crown Plaza"
-          content={
-            <>
-              $40 <del>$60</del>
-            </>
-          }
-          total={160}
-        />
+        {hotels.map((hotel) => (
+          <HotelCard
+            key={hotel.id}
+            imageUrl={hotel.imageUrl}
+            title={hotel.title}
+            content={hotel.content}
+            total={hotel.total}
+          />
+        ))}
       </div>
-    </>
+    </div>
     // </React.Fragment>
   );
 }
