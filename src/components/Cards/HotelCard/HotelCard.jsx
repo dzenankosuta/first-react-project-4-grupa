@@ -10,10 +10,10 @@ function HotelCard(props) {
       <div className="card-content">{props?.content}</div>
       <div className="card-text">Per Night</div>
       <div className="card-total">Total ${props.total}</div>
-      <div className="card-price">
+      <button className="card-price" onClick={props.onClick}>
         <LiaHotelSolid className="icon" />
         <p className="button-text">Show Hotel</p>
-      </div>
+      </button>
     </div>
   );
 }
