@@ -35,11 +35,15 @@ header {
   padding-top: 0.5em;
 }
 
-.listing ul li {
+.logo-text {
+  color: #ffffff;
+}
+
+.li {
   cursor: pointer;
   position: relative;
 }
-.listing ul li::after {
+.li::after {
   content: "";
   background-color: white;
   position: absolute;
@@ -52,6 +56,18 @@ header {
   transition: all 250ms ease-in;
 }
 
-.listing ul li:hover::after {
+.li:hover::after {
   transform: scaleX(1);
+}
+
+.active-link {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.classic-link {
+  text-decoration: none;
+  color: #afb7ff;
+  font-size: 20px;
 }
