@@ -1,12 +1,12 @@
 // import { useState } from "react";
 import "./App.css";
-import HotelCard from "./components/Cards/HotelCard/HotelCard";
 // import MySentence from "./components/MySentence/MySentence";
 // import Greeting from "./components/Greeting/Greeting";
-import hotels from "./common/hotels.json";
 import { Navbar } from "./components/Navbar/Navbar";
 import { Footer } from "./components/Footer/Footer";
 import { Route, Routes } from "react-router-dom";
+import Hotels from "./pages/Hotels/Hotels";
+import Hotel from "./pages/Hotel/Hotel";
 
 function App() {
   // const [count, setCount] = useState(0);
@@ -73,22 +73,8 @@ function App() {
         <div className="hotels">
           <Routes>
             <Route path="/" element={<p>Pocetna stranica</p>} />
-            <Route
-              path="/hotels"
-              element={
-                <div className="hotels">
-                  {hotels.map((hotel) => (
-                    <HotelCard
-                      key={hotel.id}
-                      imageUrl={hotel.imageUrl}
-                      title={hotel.title}
-                      content={hotel.content}
-                      total={hotel.total}
-                    />
-                  ))}
-                </div>
-              }
-            />
+            <Route path="/hotels" element={<Hotels />} />
+            <Route path="/hotels/:id" element={<Hotel />} />
           </Routes>
         </div>
       </main>

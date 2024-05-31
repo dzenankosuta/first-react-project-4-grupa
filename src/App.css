@@ -17,14 +17,6 @@
   min-height: 57vh;
 }
 
-.hotels {
-  margin: auto;
-  width: 85%;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-}
-
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
