@@ -12,7 +12,7 @@ function Hotels() {
           title={hotel.title}
           content={hotel.content}
           total={hotel.total}
-          onClick={() => (window.location.href = `/hotel/${hotel.id}`)}
+          onClick={() => (window.location.href = `/hotels/${hotel.id}`)}
         />
       ))}
     </div>
