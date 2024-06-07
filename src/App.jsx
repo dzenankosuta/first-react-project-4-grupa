@@ -8,6 +8,7 @@ import { Route, Routes } from "react-router-dom";
 import Hotels from "./pages/Hotels/Hotels";
 import Hotel from "./pages/Hotel/Hotel";
 import Home from "./pages/Home/Home";
+import Teams from "./pages/Teams/Teams";
 
 function App() {
   // const [count, setCount] = useState(0);
@@ -75,6 +76,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/hotels" element={<Hotels />} />
           <Route path="/hotels/:id" element={<Hotel />} />
+          <Route path="/teams" element={<Teams />} />
         </Routes>
       </main>
       <Footer />

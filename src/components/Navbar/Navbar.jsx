@@ -20,12 +20,12 @@ export function Navbar() {
               Hotels
             </NavLink>
             <NavLink
-              to="/list"
+              to="/teams"
               className={({ isActive }) =>
                 isActive ? "active-link li" : "classic-link li"
               }
             >
-              Your list
+              Teams
             </NavLink>
             <NavLink
               to="/apartments"
