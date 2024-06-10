@@ -1,7 +1,7 @@
 .team-card {
   background-color: aliceblue;
   display: grid;
-  grid-template-columns: 3fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 3fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 3fr;
   align-content: center;
   justify-content: center;
@@ -19,4 +19,9 @@
 
 .text {
   grid-column: span 6;
+}
+
+.delete-btn {
+  cursor: "pointer";
+  background-color: rgb(166, 94, 0);
 }

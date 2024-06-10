@@ -14,7 +14,6 @@ export default function TeamCard(props) {
       setTeamDescription("");
     }
   }, [showMore]);
-  console.log(teamDescription);
   return (
     <div
       className={showMore ? `team-card` : `team-card`}
@@ -26,6 +25,11 @@ export default function TeamCard(props) {
       <p className="p">{props.wins}</p>
       <p className="p">{props.draws}</p>
       <p className="p">{props.losses}</p>
+      <p className="p" onClick={props.onclick}>
+        <button onClick={props.deleteTeam} className="delete-btn show">
+          Remove
+        </button>
+      </p>
       <p className="p">
         <button onClick={() => setShowMore(!showMore)} className="show">
           {showMore ? "Show less" : "Show more"}
