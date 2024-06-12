@@ -6,6 +6,7 @@ import "./Teams.css";
 
 export default function Teams() {
   const [teams, setTeams] = useState(teamsJSON);
+  const [extended, setExtended] = useState(null);
 
   // console.log(Math.random(0, 1));
   // console.log(new Date().getTime());
@@ -32,6 +33,7 @@ export default function Teams() {
           return (
             <TeamCard
               key={index}
+              id={team.id}
               name={team["team_name"]}
               points={`${team["points"]}pts`}
               wins={team.wins}
@@ -40,6 +42,8 @@ export default function Teams() {
               losses={team.losses}
               matches={team.matches_played}
               deleteTeam={() => deleteTeam(team.id)}
+              extended={extended}
+              setExtended={setExtended}
             />
           );
         })}

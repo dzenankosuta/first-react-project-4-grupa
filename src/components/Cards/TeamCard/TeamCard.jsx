@@ -1,38 +1,65 @@
 /* eslint-disable react/prop-types */
 import "./TeamCard.css";
 import { useEffect, useState } from "react";
-export default function TeamCard(props) {
-  const [showMore, setShowMore] = useState(false);
+export default function TeamCard({
+  name,
+  id,
+  points,
+  matches,
+  wins,
+  draws,
+  losses,
+  onclick,
+  deleteTeam,
+  extended,
+  setExtended,
+}) {
+  const [closed, setClosed] = useState(true);
   const [teamDescription, setTeamDescription] = useState("");
 
   useEffect(() => {
-    if (showMore) {
+    if (!closed) {
       setTeamDescription(
         "Ovaj tim je osnovan 1886. godine. Najtrofejniji je klub u engleskoj..."
       );
     } else {
       setTeamDescription("");
     }
-  }, [showMore]);
+  }, [closed]);
+
+  useEffect(() => {
+    if (extended !== null && extended !== id) {
+      setClosed(true);
+    }
+  }, [extended, id]);
+
+  useEffect(() => {
+    if (!closed) {
+      setExtended(id);
+    } else {
+      setExtended(null);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [closed, id]);
   return (
     <div
-      className={showMore ? `team-card` : `team-card`}
-      style={{ height: showMore ? 170 : 80 }}
+      className={!closed ? `team-card` : `team-card`}
+      style={{ height: !closed ? 170 : 80 }}
     >
-      <h2 className="h2">{props.name}</h2>
-      <p className="p">{props.points}</p>
-      <p className="p">{props.matches}</p>
-      <p className="p">{props.wins}</p>
-      <p className="p">{props.draws}</p>
-      <p className="p">{props.losses}</p>
-      <p className="p" onClick={props.onclick}>
-        <button onClick={props.deleteTeam} className="delete-btn show">
+      <h2 className="h2">{name}</h2>
+      <p className="p">{points}</p>
+      <p className="p">{matches}</p>
+      <p className="p">{wins}</p>
+      <p className="p">{draws}</p>
+      <p className="p">{losses}</p>
+      <p className="p" onClick={onclick}>
+        <button onClick={deleteTeam} className="delete-btn show">
           Remove
         </button>
       </p>
       <p className="p">
-        <button onClick={() => setShowMore(!showMore)} className="show">
-          {showMore ? "Show less" : "Show more"}
+        <button onClick={() => setClosed(!closed)} className="show">
+          {!closed ? "Show less" : "Show more"}
         </button>
       </p>
       {/* {showMore ? (
@@ -46,7 +73,17 @@ export default function TeamCard(props) {
           neque!
         </p>
       ) : null} */}
-      {showMore && <p className="p text">{teamDescription}</p>}
+      {!closed && <p className="p text">{teamDescription}</p>}
     </div>
   );
 }
+
+// const obj = {
+//   firstName: "Kanita",
+//   lastName: "Metic",
+//   age: 19,
+// };
+
+// console.log(obj.firstName);
+// const { lastName } = obj;
+// console.log(lastName);
