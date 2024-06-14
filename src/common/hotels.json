@@ -78,5 +78,86 @@
     "content": "hotel with",
     "rating": "6/10",
     "total": 180
+  },
+  {
+    "id": 10,
+    "imageUrl": "https://images.trvl-media.com/lodging/1000000/30000/24300/24245/ab463c41.jpg?impolicy=resizecrop&rw=1200&ra=fit",
+    "title": "Paramount Times Square",
+    "stars": 4,
+    "content": "hotel with",
+    "rating": "7.2/10",
+    "total": 210
+  },
+  {
+    "id": 11,
+    "imageUrl": "https://images.trvl-media.com/lodging/14000000/13410000/13400100/13400088/3ddc9447.jpg?impolicy=resizecrop&rw=1200&ra=fit",
+    "title": "Four Points By Sheraton",
+    "stars": 3.5,
+    "content": "hotel with",
+    "rating": "5.6/10",
+    "total": 100
+  },
+  {
+    "id": 12,
+    "imageUrl": "https://images.trvl-media.com/lodging/49000000/48670000/48669400/48669360/4b28c418.jpg?impolicy=resizecrop&rw=1200&ra=fit",
+    "title": "Arlo Midtown",
+    "stars": 4,
+    "content": "hotel with",
+    "rating": "6/10",
+    "total": 180
+  },
+  {
+    "id": 13,
+    "imageUrl": "https://images.trvl-media.com/lodging/1000000/30000/24300/24245/ab463c41.jpg?impolicy=resizecrop&rw=1200&ra=fit",
+    "title": "Paramount Times Square",
+    "stars": 4,
+    "content": "hotel with",
+    "rating": "7.2/10",
+    "total": 210
+  },
+  {
+    "id": 14,
+    "imageUrl": "https://images.trvl-media.com/lodging/14000000/13410000/13400100/13400088/3ddc9447.jpg?impolicy=resizecrop&rw=1200&ra=fit",
+    "title": "Four Points By Sheraton",
+    "stars": 3.5,
+    "content": "hotel with",
+    "rating": "5.6/10",
+    "total": 100
+  },
+  {
+    "id": 15,
+    "imageUrl": "https://images.trvl-media.com/lodging/49000000/48670000/48669400/48669360/4b28c418.jpg?impolicy=resizecrop&rw=1200&ra=fit",
+    "title": "Arlo Midtown",
+    "stars": 4,
+    "content": "hotel with",
+    "rating": "6/10",
+    "total": 180
+  },
+  {
+    "id": 16,
+    "imageUrl": "https://images.trvl-media.com/lodging/1000000/30000/24300/24245/ab463c41.jpg?impolicy=resizecrop&rw=1200&ra=fit",
+    "title": "Paramount Times Square",
+    "stars": 4,
+    "content": "hotel with",
+    "rating": "7.2/10",
+    "total": 210
+  },
+  {
+    "id": 17,
+    "imageUrl": "https://images.trvl-media.com/lodging/14000000/13410000/13400100/13400088/3ddc9447.jpg?impolicy=resizecrop&rw=1200&ra=fit",
+    "title": "Four Points By Sheraton",
+    "stars": 3.5,
+    "content": "hotel with",
+    "rating": "5.6/10",
+    "total": 100
+  },
+  {
+    "id": 18,
+    "imageUrl": "https://images.trvl-media.com/lodging/49000000/48670000/48669400/48669360/4b28c418.jpg?impolicy=resizecrop&rw=1200&ra=fit",
+    "title": "Arlo Midtown",
+    "stars": 4,
+    "content": "hotel with",
+    "rating": "6/10",
+    "total": 180
   }
 ]
