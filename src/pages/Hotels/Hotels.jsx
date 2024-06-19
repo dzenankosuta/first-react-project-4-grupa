@@ -2,13 +2,20 @@ import HotelCard from "../../components/Cards/HotelCard/HotelCard";
 import hotels from "../../common/hotels.json";
 import "./Hotels.css";
 import Pagination from "../../components/Pagination/Pagination";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function Hotels() {
   const [page, setPage] = useState(1);
   const numOfHotelsPerPage = 8;
   const numOfHotels = hotels.length;
   const numOfPages = Math.ceil(numOfHotels / numOfHotelsPerPage);
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, [page]);
   return (
     <>
       <div className="hotels">

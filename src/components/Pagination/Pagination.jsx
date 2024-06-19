@@ -9,7 +9,11 @@ function Pagination({ numOfPages, page, setPage }) {
   }
   return (
     <div className="pagination">
-      <button className="pagination-btn" onClick={() => setPage(page - 1)}>
+      <button
+        className="pagination-btn"
+        onClick={() => setPage(page - 1)}
+        disabled={page === 1}
+      >
         <FaChevronLeft height={25} />
       </button>
       {arr.map((num) => (
@@ -21,7 +25,11 @@ function Pagination({ numOfPages, page, setPage }) {
           {num}
         </button>
       ))}
-      <button className="pagination-btn" onClick={() => setPage(page + 1)}>
+      <button
+        className="pagination-btn"
+        onClick={() => setPage(page + 1)}
+        disabled={page === numOfPages}
+      >
         <FaChevronRight height={25} />
       </button>
     </div>
