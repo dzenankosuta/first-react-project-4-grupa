@@ -28,12 +28,12 @@ export function Navbar() {
               Teams
             </NavLink>
             <NavLink
-              to="/apartments"
+              to="/quotes"
               className={({ isActive }) =>
                 isActive ? "active-link li" : "classic-link li"
               }
             >
-              Apartmens
+              Quotes
             </NavLink>
             <NavLink
               to="/about-us"

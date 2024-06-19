@@ -9,6 +9,7 @@ import Hotels from "./pages/Hotels/Hotels";
 import Hotel from "./pages/Hotel/Hotel";
 import Home from "./pages/Home/Home";
 import Teams from "./pages/Teams/Teams";
+import Quotes from "./pages/Quotes/Quotes";
 
 function App() {
   // const [count, setCount] = useState(0);
@@ -77,6 +78,7 @@ function App() {
           <Route path="/hotels" element={<Hotels />} />
           <Route path="/hotels/:id" element={<Hotel />} />
           <Route path="/teams" element={<Teams />} />
+          <Route path="/quotes" element={<Quotes />} />
         </Routes>
       </main>
       <Footer />
