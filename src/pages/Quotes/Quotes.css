@@ -5,3 +5,11 @@
   justify-items: center;
   gap: 1em;
 }
+
+.pagination-wrapper {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-column: span 4;
+}
