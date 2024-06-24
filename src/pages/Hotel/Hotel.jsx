@@ -2,11 +2,15 @@ import { useParams } from "react-router-dom";
 import "./Hotel.css";
 import hotels from "../../common/hotels.json";
 import { FaMapMarkerAlt, FaSwimmer, FaWifi, FaSpa } from "react-icons/fa";
-import { CiHeart, CiLock, CiParking1 } from "react-icons/ci";
+import { CiLock, CiParking1 } from "react-icons/ci";
+import { FaRegHeart } from "react-icons/fa";
+import { FaHeart } from "react-icons/fa6";
+import { useState } from "react";
 
 function Hotel() {
   const { id } = useParams();
   const hotel = hotels.find((hotel) => hotel.id === +id);
+  const [isFavorite, setIsFavorite] = useState(false);
 
   return (
     <>
@@ -51,9 +55,28 @@ function Hotel() {
                 Spa & Wellness
               </li>
             </ul>
-            <div style={{ display: "flex" }}>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "flex-start",
+                gap: "10px",
+              }}
+            >
               <button>Reserve</button>
-              <CiHeart className="icons" />
+              <button
+                onClick={() => {
+                  localStorage.setItem(
+                    "like",
+                    `svidja mi se hotel sa id_jem ${id}`
+                  );
+                }}
+              >
+                {isFavorite ? (
+                  <FaHeart fill="red" className="heart-icon" size={38} />
+                ) : (
+                  <FaRegHeart fill="red" className="heart-icon" size={38} />
+                )}
+              </button>
             </div>
           </div>
         </div>
