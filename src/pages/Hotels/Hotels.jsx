@@ -2,16 +2,17 @@ import HotelCard from "../../components/Cards/HotelCard/HotelCard";
 import hotels from "../../common/hotels.json";
 import "./Hotels.css";
 import Pagination from "../../components/Pagination/Pagination";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { AppContext } from "../../context/AppContext";
 
 function Hotels() {
   const navigate = useNavigate();
+  const { favoriteHotels, setFavoriteHotels } = useContext(AppContext);
   const [page, setPage] = useState(1);
   const numOfHotelsPerPage = 8;
   const numOfHotels = hotels.length;
   const numOfPages = Math.ceil(numOfHotels / numOfHotelsPerPage);
-  const [favoriteHotels, setFavoriteHotels] = useState([]);
 
   useEffect(() => {
     window.scrollTo({
@@ -26,6 +27,8 @@ function Hotels() {
     } else {
       setFavoriteHotels([]);
     }
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
     <>
