@@ -27,7 +27,6 @@ function Hotels() {
       setFavoriteHotels([]);
     }
   }, []);
-  console.log(favoriteHotels);
   return (
     <>
       <div className="hotels">
