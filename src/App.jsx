@@ -10,6 +10,7 @@ import Hotel from "./pages/Hotel/Hotel";
 import Home from "./pages/Home/Home";
 import Teams from "./pages/Teams/Teams";
 import Quotes from "./pages/Quotes/Quotes";
+import Auth from "./pages/Auth/Auth";
 
 function App() {
   // const [count, setCount] = useState(0);
@@ -74,6 +75,7 @@ function App() {
       <Navbar />
       <main className="main">
         <Routes>
+          <Route path="/auth" element={<Auth />} />
           <Route path="/" element={<Home />} />
           <Route path="/hotels" element={<Hotels />} />
           <Route path="/hotels/:id" element={<Hotel />} />
