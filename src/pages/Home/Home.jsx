@@ -1,6 +1,10 @@
+import { useContext } from "react";
 import "./Home.css";
 import { Link } from "react-router-dom";
+import { AppContext } from "../../context/AppContext";
 function Home() {
+  const { loggedInUser } = useContext(AppContext);
+  console.log(loggedInUser);
   return (
     <div className="home-page">
       <h1>Find your next stay</h1>
