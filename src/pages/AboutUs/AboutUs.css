@@ -1,0 +1,115 @@
+.about-us {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #1a1a1a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-us > .new-header {
+  padding: 0;
+  align-items: center;
+  height: 12vh;
+}
+
+.naslov {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5em;
+  margin-bottom: 1em;
+  background: linear-gradient(rgba(26, 26, 26, 0.5), rgba(38, 38, 38, 0.5));
+  height: 40vh;
+  border-bottom: 1px solid rgb(40, 40, 40);
+}
+
+.naslov > h2 {
+  font-weight: 400;
+}
+
+.team {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4em;
+}
+
+.person {
+  width: 250px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgb(40, 40, 40);
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+}
+
+.person:hover > .profilna {
+  filter: blur(2px);
+}
+
+.person:hover > .person-name {
+  transform: translateY(-200px);
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  justify-content: space-around;
+  text-align: left;
+  bottom: -200px;
+  left: 0;
+  right: 0;
+  height: 200px;
+  padding: 10px 10px;
+  background-color: #1a1a1a;
+  transition: bottom 200ms ease-in;
+  transform-origin: bottom;
+  z-index: 0;
+}
+
+.person:hover > .description {
+  bottom: 0;
+}
+
+.profilna {
+  height: 350px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  object-fit: cover;
+  transition: filter 200ms ease-in;
+}
+
+.person-name {
+  height: 50px;
+  padding: 10px 10px;
+  z-index: 1;
+  text-align: left;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #1a1a1a;
+  transition: all 200ms ease-in;
+  font-size: 1.2em;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  font-size: 3em;
+}
+
+.link {
+  color: #83838a;
+  transition: all 200ms ease-in;
+}
+
+.link:hover {
+  color: #fff;
+  cursor: pointer;
+}
