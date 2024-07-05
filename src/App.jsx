@@ -14,6 +14,8 @@ import Auth from "./pages/Auth/Auth";
 import { useContext, useEffect } from "react";
 import { AppContext } from "./context/AppContext";
 import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
+import NotFound from "./pages/NotFound/NotFound";
+import { AboutUs } from "./pages/AboutUs/AboutUs";
 
 function App() {
   const { setLoggedInUser } = useContext(AppContext);
@@ -137,6 +139,22 @@ function App() {
             element={
               <ProtectedRoute>
                 <Quotes />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/about-us"
+            element={
+              <ProtectedRoute>
+                <AboutUs />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="*"
+            element={
+              <ProtectedRoute>
+                <NotFound />
               </ProtectedRoute>
             }
           />
